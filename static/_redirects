@@ -1,4 +1,0 @@
-# Redirect www to apex domain
-# This works when Cloudflare Pages serves the site on both www and apex
-# Alternative: use Cloudflare Redirect Rules in the dashboard
-https://www.aidmh.org/* https://aidmh.org/:splat 301
