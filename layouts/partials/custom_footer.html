@@ -1,0 +1,41 @@
+{{/*
+  Custom footer for aidmh.org
+  PaperMod renders this partial inside the <footer> element.
+*/}}
+<div class="aidmh-footer">
+  <p>
+    &copy; {{ now.Format "2006" }} AIDMH &middot;
+    <a href="/about/">About</a> &middot;
+    <a href="/posts/">News</a> &middot;
+    <a href="https://journal.aidmh.org">Journal</a> &middot;
+    <a href="/index.xml">RSS Feed</a> &middot;
+    <a href="/contact/">Contact</a>
+  </p>
+  <p>
+    <a href="/index.xml" class="rss-subscribe-link">
+      📡 Subscribe via RSS
+    </a>
+  </p>
+</div>
+
+<style>
+.aidmh-footer {
+  text-align: center;
+  font-size: 0.85rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border, #e5e5e5);
+}
+.aidmh-footer a {
+  text-decoration: none;
+  color: var(--primary, #1a1a1a);
+}
+.aidmh-footer a:hover {
+  text-decoration: underline;
+}
+.rss-subscribe-link {
+  font-weight: 500;
+  font-size: 0.9rem;
+  display: inline-block;
+  margin-top: 0.5rem;
+}
+</style>

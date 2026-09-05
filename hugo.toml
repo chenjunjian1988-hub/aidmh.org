@@ -1,0 +1,145 @@
+# ──────────────────────────────────────────────
+# Hugo configuration for aidmh.org
+# Theme: PaperMod (https://github.com/adityatelange/hugo-PaperMod)
+# ──────────────────────────────────────────────
+
+baseURL = "https://aidmh.org/"
+languageCode = "en-us"
+title = "AIDMH"
+theme = "PaperMod"
+paginate = 10
+enableRobotsTXT = true
+enableEmoji = true
+
+# ── Markup ────────────────────────────────────
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    style = "github"
+    lineNos = false
+    codeFences = true
+    guessSyntax = true
+    tabWidth = 2
+
+# ── Params ────────────────────────────────────
+[params]
+  env = "production"
+  description = "AIDMH — Advancing interdisciplinary research and open-access scholarly publishing."
+  author = "AIDMH"
+  defaultTheme = "light"
+  disableThemeToggle = true
+
+  # Content display options
+  ShowReadingTime = true
+  ShowWordCount = true
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowToc = true
+  TocOpen = false
+  disableSpecial1stPost = true
+
+  # Edit post link (optional, set when repo is ready)
+  # editPostURL = "https://github.com/aidmh/aidmh.org/edit/master/content"
+
+  # ── Home page (Profile mode) ────────────────
+  [params.homeInfoParams]
+    Title = "AIDMH"
+    Content = """
+Welcome to **AIDMH** — advancing interdisciplinary research and open-access scholarly publishing.
+
+We are committed to disseminating high-quality research across multiple disciplines.
+Our open-access journal platform is hosted at [journal.aidmh.org](https://journal.aidmh.org).
+
+Subscribe to our [RSS feed](/index.xml) to stay updated.
+"""
+
+  # ── Social icons (home page) ────────────────
+  [[params.socialIcons]]
+    name = "rss"
+    url = "/index.xml"
+
+  [[params.socialIcons]]
+    name = "github"
+    url = "https://github.com/aidmh"
+
+  [[params.socialIcons]]
+    name = "email"
+    url = "mailto:contact@aidmh.org"
+
+  # ── Assets ──────────────────────────────────
+  [params.assets]
+    favicon = "/favicon.ico"
+    disableHLJS = true
+
+  # ── Cover image settings ────────────────────
+  [params.cover]
+    hidden = true
+    hiddenInList = true
+    hiddenInSingle = true
+
+  # ── Fuse.js search ──────────────────────────
+  [params.fuseOpts]
+    isCaseSensitive = false
+    shouldSort = true
+    location = 0
+    distance = 1000
+    threshold = 0.4
+    minMatchCharLength = 0
+    keys = ["title", "permalink", "summary", "content"]
+
+# ── Search ────────────────────────────────────
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+# ── Navigation menu ──────────────────────────
+[[menu.main]]
+  identifier = "about"
+  name = "About"
+  url = "/about/"
+  weight = 10
+
+[[menu.main]]
+  identifier = "news"
+  name = "News"
+  url = "/posts/"
+  weight = 20
+
+[[menu.main]]
+  identifier = "journal"
+  name = "Journal ↗"
+  url = "https://journal.aidmh.org"
+  weight = 30
+
+[[menu.main]]
+  identifier = "rss"
+  name = "RSS"
+  url = "/index.xml"
+  weight = 40
+
+# ── Taxonomies ────────────────────────────────
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+
+# ── Privacy (GDPR-friendly defaults) ──────────
+[privacy]
+  [privacy.disqus]
+    disable = true
+  [privacy.googleAnalytics]
+    disable = true
+  [privacy.instagram]
+    disable = true
+  [privacy.twitter]
+    disable = true
+  [privacy.vimeo]
+    disable = true
+  [privacy.youtube]
+    disable = true
+
+# ── Sitemap ──────────────────────────────────
+[sitemap]
+  changefreq = "weekly"
+  priority = 0.5
