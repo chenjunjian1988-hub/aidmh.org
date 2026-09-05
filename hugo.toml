@@ -7,7 +7,7 @@ baseURL = "https://aidmh.org/"
 languageCode = "en-us"
 title = "AIDMH"
 theme = "PaperMod"
-paginate = 10
+pagination.pagerSize = 10
 enableRobotsTXT = true
 enableEmoji = true
 
@@ -132,7 +132,7 @@ Subscribe to our [RSS feed](/index.xml) to stay updated.
     disable = true
   [privacy.instagram]
     disable = true
-  [privacy.twitter]
+  [privacy.x]
     disable = true
   [privacy.vimeo]
     disable = true
